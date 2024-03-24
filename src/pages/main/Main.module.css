@@ -1,0 +1,30 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Heading {
+  margin-bottom: 60px;
+}
+
+.Info {
+  display: flex;
+  max-width: 60%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.Description {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ButtonLink {
+  color: var(--colors-white);
+
+  &:hover {
+    color: var(--colors-white);
+  }
+}

@@ -9,5 +9,4 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 }
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig)

@@ -17,7 +17,7 @@
   --font-secondary: yesteryear;
 }
 
-html {
+HTML {
   color: var(--colors-dark);
   font-family: var(--font-primary), system-ui;
   font-size: 16px;
@@ -25,11 +25,11 @@ html {
   line-height: 26px;
 }
 
-body {
+BODY {
   text-size-adjust: 100%;
 }
 
-fieldset {
+FIELDSET {
   all: unset;
 }
 

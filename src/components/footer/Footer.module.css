@@ -22,7 +22,11 @@
 .Links {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  gap: 25px;
+
+  @media (width >= 990px) {
+    justify-content: space-between;
+  }
 }
 
 .Contacts {
