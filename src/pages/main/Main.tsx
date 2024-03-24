@@ -1,4 +1,5 @@
 import { Button } from '@/components/button'
+import { Header } from '@/components/header'
 import { Link } from '@/components/link'
 import { Logo } from '@/components/logo'
 import { Typography } from '@/components/typography'
@@ -7,6 +8,7 @@ import { ROUTES } from '@/constants/urls'
 export const Main = () => {
   return (
     <div>
+      <Header />
       <Typography tag="h1" variant="h1">
         Main
       </Typography>
