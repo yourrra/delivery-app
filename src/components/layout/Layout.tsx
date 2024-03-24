@@ -1,19 +1,19 @@
 import type { ReactNode } from 'react'
 
 import styles from './Layout.module.css'
+import { Header } from '../header'
+import { Footer } from '../footer'
 
 type Props = {
   children: ReactNode
-  header: ReactNode
-  footer: ReactNode
 }
 
-export const Layout = ({ children, header, footer }: Props) => {
+export const Layout = ({ children }: Props) => {
   return (
     <div className={styles.Layout}>
-      {header}
+      <Header />
       <main>{children}</main>
-      {footer}
+      <Footer />
     </div>
   )
 }
