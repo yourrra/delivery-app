@@ -1,4 +1,5 @@
-import { Link } from '@/components/Link'
+import { Button } from '@/components/button'
+import { Link } from '@/components/link'
 import { Logo } from '@/components/logo'
 import { Typography } from '@/components/typography'
 import { ROUTES } from '@/constants/urls'
@@ -13,6 +14,8 @@ export const Main = () => {
         Menu
       </Link>
       <Logo />
+      <Button>Main</Button>
+      <Button variant="red">Main</Button>
     </div>
   )
 }

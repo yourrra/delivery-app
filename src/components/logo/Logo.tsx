@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { Link } from '../Link'
+import { Link } from '../link'
 import { type ImgHTMLAttributes } from 'react'
 import { ROUTES } from '@/constants/urls'
 
