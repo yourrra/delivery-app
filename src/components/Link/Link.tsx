@@ -27,13 +27,13 @@ type Props = PropsWithChildren<
     CommonProps
 >
 
-export function Link({
+export const Link = ({
   type,
   props,
   children,
   icon,
   variant = 'default',
-}: Props) {
+}: Props) => {
   const className = cn(
     styles.link,
     {
