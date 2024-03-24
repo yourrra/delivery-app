@@ -1,0 +1,39 @@
+.Wrapper {
+  width: 100%;
+  padding: 0 24px;
+  border-top: 1px solid var(--colors-gray-600);
+  background-color: var(--colors-white);
+}
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  gap: 25px;
+
+  @media (width >= 990px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+  }
+}
+
+.Links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Contacts {
+  margin-bottom: 15px;
+}
+
+.Social {
+  display: flex;
+  gap: 16px;
+}
+
+.Title {
+  margin-bottom: 15px;
+}

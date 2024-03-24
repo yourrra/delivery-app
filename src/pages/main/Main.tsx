@@ -1,4 +1,5 @@
 import { Button } from '@/components/button'
+import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import { Link } from '@/components/link'
 import { Logo } from '@/components/logo'
@@ -18,6 +19,7 @@ export const Main = () => {
       <Logo />
       <Button>Main</Button>
       <Button variant="red">Main</Button>
+      <Footer />
     </div>
   )
 }
