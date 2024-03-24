@@ -1,0 +1,23 @@
+.link {
+  color: var(--colors-dark);
+  text-decoration: none;
+  transition: 100ms;
+
+  &:hover {
+    color: var(--colors-blue-700);
+  }
+
+  & > DIV {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &.accent {
+    color: var(--colors-blue-700);
+
+    &:hover {
+      color: var(--colors-blue-800);
+    }
+  }
+}
