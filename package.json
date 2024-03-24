@@ -52,6 +52,10 @@
     ],
     "plugins": [
       "stylelint-order"
-    ]
+    ],
+    "rules": {
+      "selector-type-case": "upper",
+      "selector-class-pattern": "^[a-zA-Z]+[a-zA-Z0-9]*$"
+    }
   }
 }
