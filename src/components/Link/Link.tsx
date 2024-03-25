@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, PropsWithChildren } from 'react'
+import { memo, type AnchorHTMLAttributes, type PropsWithChildren } from 'react'
 import { Link as ReactRouterLink } from 'react-router-dom'
 import type { LinkProps } from 'react-router-dom'
 import cn from 'classnames'
@@ -27,42 +27,38 @@ type Props = PropsWithChildren<
     CommonProps
 >
 
-export const Link = ({
-  type,
-  props,
-  children,
-  icon,
-  variant = 'default',
-}: Props) => {
-  const className = cn(
-    styles.link,
-    {
-      [styles[variant]]: variant,
-    },
-    props.className,
-  )
+export const Link = memo(
+  ({ type, props, children, icon, variant = 'default' }: Props) => {
+    const className = cn(
+      styles.link,
+      {
+        [styles[variant]]: variant,
+      },
+      props.className,
+    )
 
-  if (type === 'a') {
+    if (type === 'a') {
+      return (
+        <a {...props} className={className}>
+          <div>
+            {icon && <img src={icon} width={16} height={16} alt="" />}
+            <Typography variant="link" tag="span">
+              {children}
+            </Typography>
+          </div>
+        </a>
+      )
+    }
+
     return (
-      <a {...props} className={className}>
+      <ReactRouterLink {...props} className={className}>
         <div>
           {icon && <img src={icon} width={16} height={16} alt="" />}
           <Typography variant="link" tag="span">
             {children}
           </Typography>
         </div>
-      </a>
+      </ReactRouterLink>
     )
-  }
-
-  return (
-    <ReactRouterLink {...props} className={className}>
-      <div>
-        {icon && <img src={icon} width={16} height={16} alt="" />}
-        <Typography variant="link" tag="span">
-          {children}
-        </Typography>
-      </div>
-    </ReactRouterLink>
-  )
-}
+  },
+)

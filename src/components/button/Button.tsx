@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import styles from './Button.module.css'
-import { type PropsWithChildren, type ButtonHTMLAttributes } from 'react'
+import { type PropsWithChildren, type ButtonHTMLAttributes, memo } from 'react'
 
 type Props = PropsWithChildren<
   {
@@ -8,25 +8,27 @@ type Props = PropsWithChildren<
   } & ButtonHTMLAttributes<HTMLButtonElement>
 >
 
-export const Button = ({
-  variant = 'blue',
-  children,
-  className = '',
-  ...htmlButtonProps
-}: Props) => {
-  return (
-    <button
-      className={cn(
-        styles.Button,
-        {
-          [styles.isBlue]: variant === 'blue',
-          [styles.isRed]: variant === 'red',
-        },
-        className,
-      )}
-      {...htmlButtonProps}
-    >
-      {children}
-    </button>
-  )
-}
+export const Button = memo(
+  ({
+    variant = 'blue',
+    children,
+    className = '',
+    ...htmlButtonProps
+  }: Props) => {
+    return (
+      <button
+        className={cn(
+          styles.Button,
+          {
+            [styles.isBlue]: variant === 'blue',
+            [styles.isRed]: variant === 'red',
+          },
+          className,
+        )}
+        {...htmlButtonProps}
+      >
+        {children}
+      </button>
+    )
+  },
+)

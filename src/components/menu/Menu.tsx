@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import { Portal } from '../portal'
 import { ROUTES } from '@/constants/urls'
 import { Link } from '../link'
@@ -13,7 +13,7 @@ type Props = {
   onClose: () => void
 }
 
-export const Menu = ({ isOpen, onClose }: Props) => {
+export const Menu = memo(({ isOpen, onClose }: Props) => {
   const [closing, setClosing] = useState(false)
   if (!isOpen) return null
 
@@ -73,4 +73,4 @@ export const Menu = ({ isOpen, onClose }: Props) => {
       </div>
     </Portal>
   )
-}
+})

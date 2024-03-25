@@ -1,0 +1,9 @@
+.RedStar {
+  padding-left: 4px;
+  color: var(--colors-red-700);
+}
+
+.GrayStar {
+  padding-left: 4px;
+  color: var(--colors-gray-900);
+}

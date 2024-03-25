@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { store } from './app/store'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router'
-// import './firebase'
+import './firebase'
 
 import './styles/reset.css'
 import './styles/global.css'
